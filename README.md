@@ -1,3 +1,32 @@
+# Instructions
+
+Add the following environment files
+
+```
+environments
+  ├── environment.prod.ts
+  └── environment.ts
+```
+
+containing the following:
+
+```javascript
+export const environment = {
+  production: false, // must be 'true' for .prod.ts
+  firebase: {
+    projectId: "XXXXXXXXXX",
+    appId: "XXXXXXXXXX",
+    databaseURL: "XXXXXXXXXX",
+    storageBucket: "XXXXXXXXXX",
+    locationId: "XXXXXXXXXX",
+    apiKey: "XXXXXXXXXX",
+    authDomain: "XXXXXXXXXX",
+    messagingSenderId: "XXXXXXXXXX",
+    measurementId: "XXXXXXXXXX",
+  },
+};
+```
+
 # FirebaseRoleBasedAuth
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.3.
