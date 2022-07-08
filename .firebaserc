@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "imploie": {
+      "hosting": {
+        "firebase-role-based-auth": [
+          "imploie"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "imploie"
+  }
+}

@@ -1,0 +1,36 @@
+<h1>Home</h1>
+<h2>Todo List</h2>
+<form (ngSubmit)="addItem()" #heroForm="ngForm">
+  <mat-form-field class="example-form-field" appearance="fill">
+    <mat-label>Add Todo...</mat-label>
+    <input
+      matInput
+      type="text"
+      [(ngModel)]="value"
+      placeholder="Ex. Pick up kids"
+      name="name"
+      #name="ngModel"
+    />
+    <button
+      *ngIf="value"
+      matSuffix
+      mat-icon-button
+      type="submit"
+      (keydown.enter)="addItem()"
+      (click)="addItem()"
+      (click)="value = ''"
+    >
+      <span class="material-icons-outlined md-18">add</span>
+    </button>
+  </mat-form-field>
+</form>
+
+<h1>List</h1>
+<ul>
+  <li *ngFor="let item of (sorter$ | async).items; let i = index">
+    {{ item }}
+    <button mat-button color="primary" (click)="removeItem(i)">
+      <span class="material-icons-outlined md-18">close</span>
+    </button>
+  </li>
+</ul>

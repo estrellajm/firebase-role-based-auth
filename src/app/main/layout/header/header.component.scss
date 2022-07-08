@@ -1,0 +1,19 @@
+.container {
+  margin: 0 20px;
+  // height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+button {
+  margin-left: 20px;
+}
+
+#loggedInGroup {
+  display: flex;
+  align-items: center;
+  button {
+    height: fit-content;
+  }
+}

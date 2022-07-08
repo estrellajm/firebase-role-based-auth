@@ -1,0 +1,27 @@
+<ul>
+  <li *ngFor="let item of item$ | async">
+    {{ item.name }}
+  </li>
+</ul>
+
+<button *ngIf="!(auth.user$ | async)" (click)="auth.googleLogin()">
+  Google Login
+</button>
+<button *ngIf="auth.user$ | async" (click)="auth.signOut()">Sign Out</button>
+
+<pre>
+  {{ auth.user$ | async | json }}
+</pre>
+
+<div class="main">
+  <a
+    *ngFor="let nav of navs"
+    routerLink="{{ nav.route }}"
+    routerLinkActive="active"
+    style="margin-right: 20px"
+  >
+    {{ nav.title }}
+  </a>
+
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="header">
+    <img src="assets/avatar.svg" alt="Logo" routerLink="/" />
+  </div>
+  <div class="main">
+    <a
+      *ngFor="let nav of navs"
+      routerLink="{{ nav.route }}"
+      routerLinkActive="active"
+    >
+      <span class="material-icons-outlined md-18">{{ nav.icon }}</span>
+      {{ nav.title }}
+    </a>
+  </div>
+  <div class="footer">
+    <a routerLink="/settings" 
+    routerLinkActive="active">
+      <span class="material-icons-outlined md-18">settings</span>
+      Settings
+    </a>
+  </div>
+</div>
